@@ -12,7 +12,7 @@ const RecipeSuggestions = () => {
     setLoading(true);
     try {
       // Correct way
-const res = await axios.get(`http://localhost:5000/api/recipes/suggestions?ingredients=${ingredients}`);
+const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/recipes/suggestions?ingredients=${ingredients}`);
       setSuggestions(res.data);
     } catch (error) {
       console.error('Error fetching suggestions:', error);
