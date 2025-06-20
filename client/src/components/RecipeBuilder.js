@@ -75,7 +75,7 @@ export default function RecipeBuilder({ ingredients = [] }) {
     // Save the generated recipe if it exists, otherwise save manual steps
     const recipeToSave = generatedRecipe || { name: recipeName, steps };
 
-    fetch('${process.env.REACT_APP_BACKEND_URL}/api/recipes', {
+    fetch(`${process.env.REACT_APP_BACKEND_URL}/api/recipes`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(recipeToSave),
@@ -112,7 +112,7 @@ export default function RecipeBuilder({ ingredients = [] }) {
 
     try {
       setIsGenerating(true);
-      const res = await fetch('${process.env.REACT_APP_BACKEND_URL}/api/generate-steps', {
+      const res = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/generate-steps`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
