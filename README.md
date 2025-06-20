@@ -25,3 +25,7 @@ FridgeCraft is a smart, AI-powered recipe builder that helps you make the most o
 - Node.js + Express
 - MongoDB + Mongoose
 - Google Gemini API (AI step generation)
+## 🔗 Live Demo
+
+- **Frontend (Vercel)**: [https://fridge-craft.vercel.app/](https://fridge-craft.vercel.app/)  
+- **Backend (Render)**: [https://fridgecraft-backend.onrender.com](https://fridgecraft-backend.onrender.com)
